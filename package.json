@@ -1,0 +1,22 @@
+{
+  "name": "ds-with-typescript",
+  "version": "1.0.0",
+  "description": "Basic implementation of data sctructures using typescript.",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supriya-kotturu/ds-with-typesctipt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supriya-kotturu/ds-with-typesctipt/issues"
+  },
+  "homepage": "https://github.com/supriya-kotturu/ds-with-typesctipt#readme"
+}
