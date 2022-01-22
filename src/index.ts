@@ -1,27 +1,13 @@
-class Sorter {
-  constructor(public collection: number[]) {}
+import { NumbersCollection } from './NumbersCollection';
+import { CharactersCollection } from './CharactersCollection';
+import { Sorter } from './Sorter';
 
-  sort(): void {
-    const { length } = this.collection;
+const numbersCollection = new NumbersCollection([0, -4, 5, 2]);
+const NumSorter = new Sorter(numbersCollection);
+NumSorter.sort();
+console.log(numbersCollection.data);
 
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          this.collection[j] = this.collection[j] + this.collection[j + 1];
-          this.collection[j + 1] = this.collection[j] - this.collection[j + 1];
-          this.collection[j] = this.collection[j] - this.collection[j + 1];
-
-          //   const leftValue = this.collection[j];
-          //   this.collection[j] = this.collection[j + 1];
-          //   this.collection[j + 1] = leftValue;
-        }
-      }
-    }
-
-    console.log('here : ', this.collection);
-  }
-}
-
-const sorter = new Sorter([0, -4, 5, 2]);
-sorter.sort();
-console.log(sorter.collection);
+const charactersCollection = new CharactersCollection('freaky friday');
+const CharSorter = new Sorter(charactersCollection);
+CharSorter.sort();
+console.log(charactersCollection.data);
